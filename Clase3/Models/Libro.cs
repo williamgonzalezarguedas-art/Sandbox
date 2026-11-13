@@ -4,12 +4,21 @@ using System.Text;
 
 namespace Clase3.Models
 {
+    /// <summary>
+    /// modelo que representa un libro en la biblioteca.
+    /// </summary>
     public class Libro
     {
+        //Seccion de las propiedades de la clase libro
         public string Titulo { get; set; }
         public string Autor { get; set; }
         public bool Disponible { get; private set; }
 
+        /// <summary>
+        /// Inicializa una nueva instancia de la clase Libro.
+        /// </summary>
+        /// <param name="titulo"></param>
+        /// <param name="autor"></param>
         public Libro(string titulo, string autor)
         {
             Titulo = titulo;
@@ -17,6 +26,12 @@ namespace Clase3.Models
             Disponible = true;
         }
 
+        /// <summary>
+        /// Inicializa una nueva instancia de la clase Libro.
+        /// </summary>
+        /// <param name="titulo"></param>
+        /// <param name="autor"></param>
+        /// <param name="disponible"></param>
         public Libro(string titulo, string autor, bool disponible)
         {
             Titulo = titulo;
@@ -24,6 +39,9 @@ namespace Clase3.Models
             Disponible = disponible;
         }
 
+        /// <summary>
+        /// Marca el libro como prestado si está disponible y muestra un mensaje en la consola.
+        /// </summary>
         public void Prestar()
         {
             if (Disponible)
@@ -37,6 +55,9 @@ namespace Clase3.Models
             }
         }
 
+        /// <summary>
+        /// Marca el libro como devuelto y muestra un mensaje en la consola.
+        /// </summary>
         public void Devolver()
         {
             if (!Disponible)

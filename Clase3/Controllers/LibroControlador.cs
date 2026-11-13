@@ -14,6 +14,9 @@ namespace Clase3.Controllers
         private LibroVista  vista = new LibroVista();
         private List<Libro> libros = new List<Libro>();
 
+        /// <summary>
+        /// Muestra el menu principal en pantalla. 
+        /// </summary>
         public void mostrarMenu()
         {
             vista.MostrarMenu();

@@ -4,9 +4,14 @@ using System.Text;
 
 namespace Clase3.Views
 {
-    public  class LibroVista
+    /// <summary>
+    /// Vista para mostrar información relacionada con los libros en la consola.
+    /// </summary>
+    public class LibroVista
     {
-
+        /// <summary>
+        /// Muestra el menú principal de la biblioteca en la consola.
+        /// </summary>
         public void MostrarMenu()
         {
             Console.WriteLine("=== Menú de Biblioteca ===");
@@ -19,6 +24,10 @@ namespace Clase3.Views
            
         }
 
+        /// <summary>
+        /// Muestra la lista de libros disponibles en la biblioteca.
+        /// </summary>
+        /// <param name="libros"></param>
         public void MostrarLibrosDisponibles(List<Models.Libro> libros)
         {
             Console.WriteLine("=== Libros Disponibles ===");
@@ -31,6 +40,10 @@ namespace Clase3.Views
             
         }
 
+        /// <summary>
+        /// Muestra un mensaje en la consola.
+        /// </summary>
+        /// <param name="mensaje"></param>
         public void MostrarMensaje(string mensaje)
         {
             Console.WriteLine(mensaje);
